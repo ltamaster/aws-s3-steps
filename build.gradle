@@ -13,7 +13,7 @@ ext.sopsCopyright = "© 2017, Rundeck, Inc."
 ext.sopsUrl = "http://rundeck.com"
 ext.buildDateString=new Date().format("yyyy-MM-dd'T'HH:mm:ssX")
 ext.archivesBaseName = "aws-s3-steps"
-
+ext.pluginBaseFolder = "."
 
 scmVersion {
     ignoreUncommittedChanges = true
@@ -34,8 +34,9 @@ scmVersion {
 
 project.version = scmVersion.version
 ext.archiveFilename = ext.archivesBaseName + '-' + version 
-println ("name:"+archiveFilename )
-
 
 apply from: 'https://raw.githubusercontent.com/ltamaster/build-zip/master/build.gradle'
+
+//'../build-zip/build.gradle'
+//'https://raw.githubusercontent.com/ltamaster/build-zip/master/build.gradle'
 
